@@ -1,0 +1,13 @@
+zone "l1professor.lan" {
+
+        type master;
+        file "/etc/bind/db.l1professor.lan";
+
+};
+zone "15.168.192.in-addr.arpa" {
+
+        type master;
+        file "/etc/bind/db.15.168.192";
+
+
+};
