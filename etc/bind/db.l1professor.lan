@@ -1,16 +1,30 @@
 ;
 ; BIND data file for local loopback interface
 ;
+
+
 $TTL    604800
 @       IN      SOA     l1professor.lan. root.l1professor.lan. (
                               1         ; Serial
-                         604800         ; Refresh
-                          86400         ; Retry
-                        2419200         ; Expire
-                         604800 )       ; Negative Cache TTL
+                             8H         ; Refresh
+                             2H         ; Retry
+                             4W         ; Expire
+                             1D )       ; Negative Cache TTL
 ;
-@       IN      NS      l1professor.lan.
-@       IN      A       192.168.15.30
-@       IN      AAAA    ::1
 
+@                       IN      NS      l1professor.lan.
 
+@                       IN      A       192.168.15.30
+
+@                       IN      AAAA    ::1
+
+mail                    A       192.168.15.30
+
+l1professor.lan.        A       192.168.15.30
+server                  A       192.168.15.30
+
+virtual                 A       192.168.15.30
+
+router                  A       192.168.15.30
+gateway                 CNAME   192.168.15.30
+gw                      CNAME   192.168.15.30
