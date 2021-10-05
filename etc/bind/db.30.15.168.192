@@ -1,0 +1,13 @@
+;
+; BIND reverse data file for local 192.168.1.XXX net
+;
+$TTL    604800
+@       IN      SOA     ns.l1professor.lan. root.l1professor.lan. (
+                              1         ; Serial
+                             8H         ; Refresh
+                             2H         ; Retry
+                             4W         ; Expire
+                             1D )       ; Negative Cache TTL
+;
+@       IN      NS      ns.
+30      IN      PTR     ns.l1professor.lan.
